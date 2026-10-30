@@ -66,3 +66,9 @@ For a meaningful evaluation, keep test images separate from training data and re
 ## Responsible Use
 
 Predictions are intended for educational demonstration and early awareness only. Confirm suspected plant diseases with a qualified agricultural expert before taking treatment or pesticide decisions.
+
+## Project Development Notes
+
+Evaluate per-class precision, recall, F1, and confusion matrix on images separate from training. Test varied lighting and backgrounds; predictions should be confirmed by an agricultural expert.
+
+For reproducible updates, record the dataset or upstream version, environment and dependency versions, configuration, and actual outputs from each run. Keep illustrative examples clearly labelled and never commit credentials or private data.
