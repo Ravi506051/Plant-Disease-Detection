@@ -58,3 +58,11 @@ GitHub: https://github.com/Ravi506051
 ## 🤝 Contributions
 
 Contributions and suggestions for improving the code, documentation and user interface are welcome.
+
+## Model Evaluation Checklist
+
+For a meaningful evaluation, keep test images separate from training data and report per-class precision, recall, F1-score, and a confusion matrix. Test images captured outside the training dataset to understand how lighting, background, camera quality, and leaf condition affect predictions. Record the model checkpoint and preprocessing used for each evaluation.
+
+## Responsible Use
+
+Predictions are intended for educational demonstration and early awareness only. Confirm suspected plant diseases with a qualified agricultural expert before taking treatment or pesticide decisions.
