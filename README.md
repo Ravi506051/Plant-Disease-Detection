@@ -72,3 +72,9 @@ Predictions are intended for educational demonstration and early awareness only.
 Evaluate per-class precision, recall, F1, and confusion matrix on images separate from training. Test varied lighting and backgrounds; predictions should be confirmed by an agricultural expert.
 
 For reproducible updates, record the dataset or upstream version, environment and dependency versions, configuration, and actual outputs from each run. Keep illustrative examples clearly labelled and never commit credentials or private data.
+
+### Technical Deep Dive
+
+For image classification, apply the same resize, channel ordering, and normalization at inference that were used during training. Evaluate on images held out from training and report per-class precision, recall, F1-score, and a confusion matrix across all 39 labels. Test external photographs with different lighting, backgrounds, camera quality, and leaf orientations to understand domain shift.
+
+Suggested engineering checks: validate image decoding and tensor shape, load checkpoints with the expected architecture, keep class-index mappings versioned with the model, and display uncertainty without presenting predictions as a definitive agricultural diagnosis.
