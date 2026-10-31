@@ -78,3 +78,11 @@ For reproducible updates, record the dataset or upstream version, environment an
 For image classification, apply the same resize, channel ordering, and normalization at inference that were used during training. Evaluate on images held out from training and report per-class precision, recall, F1-score, and a confusion matrix across all 39 labels. Test external photographs with different lighting, backgrounds, camera quality, and leaf orientations to understand domain shift.
 
 Suggested engineering checks: validate image decoding and tensor shape, load checkpoints with the expected architecture, keep class-index mappings versioned with the model, and display uncertainty without presenting predictions as a definitive agricultural diagnosis.
+
+## Model Validation and Responsible Use
+
+- Keep test images separate from training data and evaluate per-class precision, recall, F1-score, and a confusion matrix.
+- Test on real-world images with different lighting, backgrounds, camera quality, and leaf orientations.
+- Record the model checkpoint, input resizing/normalization, class mapping, and dataset split for each evaluation.
+- Display confidence carefully; a high model score does not guarantee a correct diagnosis.
+- Use predictions for educational awareness only and seek qualified agricultural guidance before taking crop-treatment decisions.
