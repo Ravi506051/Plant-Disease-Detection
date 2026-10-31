@@ -86,3 +86,11 @@ Suggested engineering checks: validate image decoding and tensor shape, load che
 - Record the model checkpoint, input resizing/normalization, class mapping, and dataset split for each evaluation.
 - Display confidence carefully; a high model score does not guarantee a correct diagnosis.
 - Use predictions for educational awareness only and seek qualified agricultural guidance before taking crop-treatment decisions.
+
+## Computer Vision Evaluation
+
+- Keep training, validation, and test images separated by source or plant where possible to reduce near-duplicate leakage.
+- Apply image resizing and normalization consistently during training and inference.
+- Report per-class precision, recall, F1-score, and a confusion matrix in addition to overall accuracy.
+- Inspect false predictions across lighting, backgrounds, leaf orientation, and disease severity.
+- Treat predictions as decision support only; confirm suspected plant diseases with an appropriate agricultural expert.
