@@ -94,3 +94,10 @@ Suggested engineering checks: validate image decoding and tensor shape, load che
 - Report per-class precision, recall, F1-score, and a confusion matrix in addition to overall accuracy.
 - Inspect false predictions across lighting, backgrounds, leaf orientation, and disease severity.
 - Treat predictions as decision support only; confirm suspected plant diseases with an appropriate agricultural expert.
+
+## Robustness and Evaluation Plan
+
+- Keep evaluation images separate from training data and report per-class precision, recall, F1-score, and a confusion matrix.
+- Test images captured under varied lighting, backgrounds, camera quality, and leaf conditions.
+- Record the checkpoint, image resizing, normalization, and class mapping used for each evaluation.
+- Treat predictions as preliminary educational guidance and confirm suspected disease with a qualified agricultural expert.
