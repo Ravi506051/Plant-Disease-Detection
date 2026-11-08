@@ -2,46 +2,38 @@
 
 A computer-vision project that classifies plant leaf images into disease categories using a convolutional neural network.
 
-## Project capabilities
-- Leaf-image classification across the configured classes.
-- PyTorch-based deep-learning model.
-- Flask web interface for image-based prediction.
-- Sample images for testing, where included.
+## Project Capabilities
+- Leaf-image classification across the classes configured in the project.
+- Deep-learning inference with the model and framework included in the repository.
+- Flask-based interface for image submission and prediction.
+- Image preprocessing and prediction display.
 
 ## Technology
 Python · PyTorch · CNN · Flask · Jupyter Notebook
 
-## Dataset
-The existing documentation references the PlantVillage dataset. Confirm the exact dataset version, class mapping and model checkpoint used by the current code before training or inference.
+## Workflow
+1. Load and preprocess a leaf image.
+2. Resize and normalize it to match the model's expected input.
+3. Run inference with the trained CNN.
+4. Map the predicted class index to its configured disease label.
+5. Display the prediction in the application.
 
-## Run locally
+## Setup
 ```bash
 git clone https://github.com/Ravi506051/Plant-Disease-Detection.git
 cd Plant-Disease-Detection
 pip install -r requirements.txt
 ```
-If the project uses a separately distributed model checkpoint, download it from the source documented in the repository and place it at the expected path. Start the Flask app using the entry-point instructions in the project folder.
+Start the Flask application using the entry point provided in the repository. If a model checkpoint is distributed separately, place it at the path expected by the code.
 
-## Validation
-Evaluate with a held-out dataset and report per-class precision, recall, F1-score and a confusion matrix. Test images from different lighting conditions and backgrounds to understand generalization.
+## Evaluation and Limitations
+Evaluate on a held-out dataset and report per-class precision, recall, F1-score, and a confusion matrix. Results may vary with lighting, background, camera quality, and leaf condition. This educational project is not a substitute for expert agricultural diagnosis.
 
-## Disclaimer
-This project is an educational image-classification tool. Predictions are not a substitute for expert agricultural diagnosis or local extension advice.
-
-## Future work
-Add confidence calibration, real-world field-image testing, model versioning and a clear record of dataset provenance.
+## Future Improvements
+- Test with real-world field images.
+- Add confidence calibration and uncertainty reporting.
+- Track dataset provenance and model versions.
+- Add automated tests for preprocessing and prediction.
 
 ## Maintainer
 **Ravi Kumar Rao** · [GitHub](https://github.com/Ravi506051)
-
-## Skills Demonstrated
-
-- Image classification
-- convolutional neural networks
-- image preprocessing
-- model validation
-- computer-vision application development.
-
-## Portfolio Context
-
-This project is part of my hands-on learning portfolio. The repository documents the workflow and implementation; results should be reproduced from the included code and data before being used in reports or professional claims.
