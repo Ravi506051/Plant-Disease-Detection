@@ -45,3 +45,10 @@ For a reproducible experiment, keep the image preprocessing steps, class-to-inde
 ## Example Use Case
 
 The application can support an initial screening workflow by highlighting a possible leaf-disease class from an uploaded image. Confirm any suspected disease with an agricultural expert before taking treatment decisions.
+
+## Deployment and Validation Considerations
+
+- Verify image resizing, normalization, and class-index mapping are identical between training and inference.
+- Evaluate per-class precision and recall, and inspect a sample of incorrect predictions.
+- Test images under different lighting, backgrounds, and capture conditions to understand generalization limits.
+- Use predictions as an initial screening aid; confirm important crop-health decisions with domain expertise.
