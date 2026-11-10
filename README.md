@@ -37,3 +37,11 @@ Evaluate on a held-out dataset and report per-class precision, recall, F1-score,
 
 ## Maintainer
 **Ravi Kumar Rao** · [GitHub](https://github.com/Ravi506051)
+
+## Model Reliability Checklist
+
+For a reproducible experiment, keep the image preprocessing steps, class-to-index mapping, model checkpoint, and dependency versions aligned. When reporting performance, include the held-out split strategy, per-class precision/recall/F1, and a confusion matrix rather than a single accuracy number. Test images captured under different lighting and backgrounds to understand how well the model generalizes beyond curated samples.
+
+## Example Use Case
+
+The application can support an initial screening workflow by highlighting a possible leaf-disease class from an uploaded image. Confirm any suspected disease with an agricultural expert before taking treatment decisions.
