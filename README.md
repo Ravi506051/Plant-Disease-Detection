@@ -1,54 +1,28 @@
-# Plant Disease Detection Using Deep Learning
+# Plant Disease Detection
 
-A computer-vision project that classifies plant leaf images into disease categories using a convolutional neural network.
+A deep-learning project with a model-development notebook and a Flask application for classifying leaf images into the configured disease classes.
 
-## Project Capabilities
-- Leaf-image classification across the classes configured in the project.
-- Deep-learning inference with the model and framework included in the repository.
-- Flask-based interface for image submission and prediction.
-- Image preprocessing and prediction display.
+## Project areas
 
-## Technology
-Python · PyTorch · CNN · Flask · Jupyter Notebook
+- Model/Plant Disease Detection Code.ipynb — notebook model workflow.
+- Flask Deployed App/ — Flask app, CNN inference code, templates, static assets, and disease/supplement information CSVs.
+- test_images/ and demo_images/ — example images in the repository.
 
-## Workflow
-1. Load and preprocess a leaf image.
-2. Resize and normalize it to match the model's expected input.
-3. Run inference with the trained CNN.
-4. Map the predicted class index to its configured disease label.
-5. Display the prediction in the application.
+## Run the Flask application
 
-## Setup
-```bash
+~~~bash
 git clone https://github.com/Ravi506051/Plant-Disease-Detection.git
-cd Plant-Disease-Detection
+cd Plant-Disease-Detection/Flask-Deployed-App
 pip install -r requirements.txt
-```
-Start the Flask application using the entry point provided in the repository. If a model checkpoint is distributed separately, place it at the path expected by the code.
+python app.py
+~~~
 
-## Evaluation and Limitations
-Evaluate on a held-out dataset and report per-class precision, recall, F1-score, and a confusion matrix. Results may vary with lighting, background, camera quality, and leaf condition. This educational project is not a substitute for expert agricultural diagnosis.
+If your shell treats the folder name with spaces as required, use its exact repository path. Open the local address printed by Flask and try one of the sample images.
 
-## Future Improvements
-- Test with real-world field images.
-- Add confidence calibration and uncertainty reporting.
-- Track dataset provenance and model versions.
-- Add automated tests for preprocessing and prediction.
+## Model notes
+
+Predictions depend on the trained model, class mapping, preprocessing, image quality, lighting, and background. Verify the expected model files and labels in the app configuration. This educational prototype is not a substitute for confirmation from an agricultural expert.
 
 ## Maintainer
-**Ravi Kumar Rao** · [GitHub](https://github.com/Ravi506051)
 
-## Model Reliability Checklist
-
-For a reproducible experiment, keep the image preprocessing steps, class-to-index mapping, model checkpoint, and dependency versions aligned. When reporting performance, include the held-out split strategy, per-class precision/recall/F1, and a confusion matrix rather than a single accuracy number. Test images captured under different lighting and backgrounds to understand how well the model generalizes beyond curated samples.
-
-## Example Use Case
-
-The application can support an initial screening workflow by highlighting a possible leaf-disease class from an uploaded image. Confirm any suspected disease with an agricultural expert before taking treatment decisions.
-
-## Deployment and Validation Considerations
-
-- Verify image resizing, normalization, and class-index mapping are identical between training and inference.
-- Evaluate per-class precision and recall, and inspect a sample of incorrect predictions.
-- Test images under different lighting, backgrounds, and capture conditions to understand generalization limits.
-- Use predictions as an initial screening aid; confirm important crop-health decisions with domain expertise.
+Ravi Kumar Rao · [GitHub](https://github.com/Ravi506051)
