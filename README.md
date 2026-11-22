@@ -12,12 +12,12 @@ A deep-learning project with a model-development notebook and a Flask applicatio
 
 ~~~bash
 git clone https://github.com/Ravi506051/Plant-Disease-Detection.git
-cd Plant-Disease-Detection/Flask-Deployed-App
+cd "Flask Deployed App"
 pip install -r requirements.txt
 python app.py
 ~~~
 
-If your shell treats the folder name with spaces as required, use its exact repository path. Open the local address printed by Flask and try one of the sample images.
+Open the local address printed by Flask and try one of the sample images.
 
 ## Model notes
 
